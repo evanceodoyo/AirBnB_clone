@@ -5,7 +5,7 @@ Base class for the AirBnB project models.
 
 from uuid import uuid4
 from datetime import datetime
-import models
+# import models
 
 
 class BaseModel:
@@ -34,17 +34,23 @@ class BaseModel:
         if not kwargs:
             self.id = str(uuid4())
             self.created_at = datetime.utcnow()
-            self.updated_at = datetime.utcnow()
-            models.storage.new(self)
+            self.updated_at = self.created_at
         else:
             for key, value in kwargs.items():
-                if key in ("created_at", "updated_at"):
-                    self.__dict__[key] = datetime.strptime(
-                            value, DATE_TIME_FORMAT)
-                elif key[0] == "id":
-                    self.__dict__[key] = str(value)
-                else:
-                    self.__dict__[key] = value
+                if key != "__class__":
+                    setattr(self, key, value)
+            if kwargs.get("created_at") and type(self.created_at) is str:
+                self.created_at = datetime.strptime(
+                        kwargs["created_at"], DATE_TIME_FORMAT)
+            else:
+                self.created_at = datetime.utcnow()
+            if kwargs.get("updated_at") and type(self.updated_at) is str:
+                self.updated_at = datetime.strptime(
+                        kwargs["updated_at"], DATE_TIME_FORMAT)
+            else:
+                self.updated_at = datetime.utcnow()
+            if kwargs.get("id") is None:
+                self.id = str(uuid4())
 
     def __str__(self):
         """
@@ -59,7 +65,8 @@ class BaseModel:
         with the current datetime.
         """
         self.updated_at = datetime.utcnow()
-        models.storage.save()
+        # models.storage.new(self)
+        # models.storage.save()
 
     def to_dict(self):
         """
