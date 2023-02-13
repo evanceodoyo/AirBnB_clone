@@ -5,7 +5,7 @@ Base class for the AirBnB project models.
 
 from uuid import uuid4
 from datetime import datetime
-# import models
+from models import storage
 
 
 class BaseModel:
@@ -35,6 +35,7 @@ class BaseModel:
             self.id = str(uuid4())
             self.created_at = datetime.utcnow()
             self.updated_at = self.created_at
+            storage.new(self)
         else:
             for key, value in kwargs.items():
                 if key != "__class__":
@@ -65,8 +66,7 @@ class BaseModel:
         with the current datetime.
         """
         self.updated_at = datetime.utcnow()
-        # models.storage.new(self)
-        # models.storage.save()
+        storage.save()
 
     def to_dict(self):
         """
