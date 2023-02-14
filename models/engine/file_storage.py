@@ -5,6 +5,7 @@ Serializes and deserializes JSON types.
 """
 
 import json
+from hashlib import md5
 
 classes = {}
 
