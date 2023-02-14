@@ -5,9 +5,16 @@ Serializes and deserializes JSON types.
 """
 
 import json
-from hashlib import md5
+from models.amenity import Amenity
+from models.base_model import BaseModel
+from models.city import City
+from models.place import Place
+from models.review import Review
+from models.state import State
+from models.user import User
 
-classes = {}
+classes = {"Amenity": Amenity, "BaseModel": BaseModel, "City": City,
+           "Place": Place, "Review": Review, "State": State, "User": User}
 
 
 class FileStorage:
@@ -53,8 +60,8 @@ class FileStorage:
         try:
             with open(self.__file_path, 'r') as f:
                 new_dict = json.load(f)
-            for value in new_dict.values():
-                cls = value["__class__"]
-                self.new(eval(cls)(**value))
+            for key in new_dict:
+                self.__objects[key] = classes[
+                        new_dict[key]["__class__"]](**new_dict[key])
         except Exception:
             pass
