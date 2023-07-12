@@ -1,6 +1,5 @@
 *.pyc
 /pycache
 __pycache__
-models/test_*
-/models/test_*
+#test_*
 *.json
