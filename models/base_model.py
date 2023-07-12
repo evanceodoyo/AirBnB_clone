@@ -4,6 +4,7 @@
 Module containing the definition of the BaseClass for the AirBnb project.
 """
 
+import models
 from uuid import uuid4
 from datetime import datetime
 
@@ -70,6 +71,7 @@ class BaseModel:
             with the current datetime.
         """
         self.updated_at = datetime.utcnow()
+        models.storage.save()
 
     def to_dict(self):
         """
