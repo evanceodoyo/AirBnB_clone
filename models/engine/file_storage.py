@@ -7,6 +7,9 @@ Ensures persistence of an object's data between program execution.
 """
 
 import json
+from models.base_model import BaseModel
+
+models = {"BaseModel": BaseModel}
 
 
 class FileStorage:
