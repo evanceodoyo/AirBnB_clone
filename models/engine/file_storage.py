@@ -8,8 +8,9 @@ Ensures persistence of an object's data between program execution.
 
 import json
 from models.base_model import BaseModel
+from models.user import User
 
-models = {"BaseModel": BaseModel}
+models = {"BaseModel": BaseModel, "User": User}
 
 
 class FileStorage:
