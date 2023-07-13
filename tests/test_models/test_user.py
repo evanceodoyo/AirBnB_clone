@@ -74,3 +74,7 @@ class TestUser(unittest.TestCase):
         base = User()
         base.save()
         self.assertNotEqual(base.created_at, base.updated_at)
+
+
+if __name__ == "__main__":
+    unittest.main()
