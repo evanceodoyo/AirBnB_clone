@@ -196,12 +196,12 @@ class HBNBCommand(cmd.Cmd):
             elif args[1].startswith("destroy("):
                 id = args[1].split("(")[1].split(")")[0]
                 self.do_destroy(args[0] + " " + id)
-            # elif args[1].startswith("update("):
-            #     id = args[1].split("(")[1].split(",")[0]
-            #     attribute = args[1].split("(")[1].split(",")[1]
-            #     value = args[1].split("(")[1].split(",")[2].split(")")[0]
-            #     self.do_update(args[0] + " " + id + " " + attribute + " " +
-            #                    value)
+            elif args[1].startswith("update("):
+                id = args[1].split("(")[1].split(",")[0]
+                attribute = args[1].split("(")[1].split(",")[1]
+                value = args[1].split("(")[1].split(",")[2].split(")")[0]
+                self.do_update(args[0] + " " + id + " " + attribute + " " +
+                               value)
 
 
 if __name__ == "__main__":
