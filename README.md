@@ -18,8 +18,8 @@ Once the command interpreter is running, you can use the following commands to i
 - **help**: list all commands.
    ```shell
    Documented commands (type help <topic>):
-    ========================================
-    EOF  all  count  create  destroy  help  quit  show  update
+   ========================================
+   EOF  all  count  create  destroy  help  quit  show  update
    ```
 - **help <command>**: Help on a specific command.
    ```shell
@@ -91,7 +91,7 @@ Here are some examples of how to use the command interpreter:
   (hbnb) update User  c6621392-cefe-4c86-b85b-09c171b749f4 name "John Doe"
   ```
   
-- Confirm the name is changed
+- Confirm the name is updated
   ```shell
   (hbnb) show c6621392-cefe-4c86-b85b-09c171b749f4
   [User] (c6621392-cefe-4c86-b85b-09c171b749f4) {'id': 'c6621392-cefe-4c86-b85b-09c171b749f4', 'created_at': datetime.datetime(2023, 7, 13, 17, 52, 51, 232830), 'updated_at': datetime.datetime(2023, 7, 13, 17, 52, 51, 232948), 'name': 'John'}
