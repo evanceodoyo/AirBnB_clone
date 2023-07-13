@@ -25,7 +25,7 @@ class TestAmenity(unittest.TestCase):
         """
         base = Amenity()
         base.name = "Amenity Name"
-        self.assertEqual(base.name, "Amemity Name")
+        self.assertEqual(base.name, "Amenity Name")
 
     def test_inheritance(self):
         """

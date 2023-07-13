@@ -66,7 +66,7 @@ class TestPlace(unittest.TestCase):
         base.city_id = "0001"
         base.user_id = "0001"
         base.name = "The awesome house"
-        base.description = "The awesome house"
+        base.description = "The awesome house is warm and cozy."
         base.number_rooms = 4
         base.number_bathrooms = 2
         base.max_guest = 10
