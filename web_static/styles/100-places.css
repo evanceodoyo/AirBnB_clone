@@ -1,0 +1,112 @@
+.places {
+  text-align: center;
+}
+.places h1 {
+  text-align: left;
+}
+.places article {
+  display: inline-block;
+  position: relative;
+  width: 390px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ff5a5f;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.places article h2 {
+  font-size: 30px;
+  padding-right: 70px;
+  padding-bottom: 5px;
+  margin-top: 0;
+  text-align: center;
+}
+.price_by_night {
+  border: 4px solid #ff5a5f;
+  color: #ff5a5f;
+  border-radius: 50%;
+  font-size: 30px;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.price_by_night h4 {
+  line-height: 60px;
+  margin: 0;
+}
+
+.information {
+  height: 80px;
+  border-top: 1px solid #ddd;
+}
+.max_guest,
+.number_rooms,
+.number_bathrooms {
+  display: inline-block;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  width: 100px;
+}
+.max_guest {
+  background-image: url("../images/icon_group.png");
+}
+.number_rooms {
+  background-image: url("../images/icon_bed.png");
+}
+.number_bathrooms {
+  background-image: url("../images/icon_bath.png");
+}
+.max_guest p,
+.number_rooms p,
+.number_bathrooms p {
+  margin-top: 50px;
+  text-align: center;
+}
+.user,
+.description,
+.places .reviews,
+.places .amenities {
+  text-align: left;
+}
+.places .amenities,
+.reviews {
+  margin-top: 40px;
+}
+.places .amenities h2,
+.places .reviews h2 {
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+.places .reviews h3 {
+  font-size: 14px;
+}
+.places .reviews p {
+  font-size: 12px;
+}
+.places .amenities ul,
+.places .reviews ul {
+  list-style-type: none;
+  padding: 0;
+}
+.places .amenities li {
+  padding-left: 40px;
+  margin-bottom: 10px;
+}
+
+.places .amenities li:nth-child(1) {
+  background: url("../images/icon_tv.png") 0 50% no-repeat;
+  background-size: 20px;
+}
+.places .amenities li:nth-child(2) {
+  background: url("../images/icon_wifi.png") 0 50% no-repeat;
+  background-size: 20px;
+}
+.places .amenities li:nth-child(3) {
+  background: url("../images/icon_pets.png") 0 50% no-repeat;
+  background-size: 20px;
+}
