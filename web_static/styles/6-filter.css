@@ -66,4 +66,18 @@ button:hover {
 .locations:hover .popover,
 .filters .amenities:hover .popover {
     display: block;
+    z-index: 99;
 }
+/* Challenge: align the popup to the respective filter section */
+.locations:hover .popover {
+    position: absolute;
+    right: 0;
+    margin-top: 0;
+
+}
+.filters .amenities:hover .popover {
+    position: absolute;
+    left: auto;
+    margin-top: 0;
+}
+
